@@ -24,6 +24,9 @@ export function Home(props) {
             <ItemImage source={ book.cover_image} />
             <Card.Body>
               <Card.Title>{ book.book_title }</Card.Title>
+              <Card.Text>
+                By {book.author}
+              </Card.Text>
             </Card.Body>
           </Card>
         </Col>
