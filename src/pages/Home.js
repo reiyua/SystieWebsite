@@ -2,8 +2,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
-
-
 import { useState, useEffect, useContext } from "react"
 import { ItemImage } from "../components/ItemImage"
 
