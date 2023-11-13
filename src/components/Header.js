@@ -29,7 +29,7 @@ export function Header(props) {
   return (
     <Navbar>
       <Container>
-        <Navbar.Brand>RaysBookClub</Navbar.Brand>
+        <Navbar.Brand>Ray's Book Club</Navbar.Brand>
         <Nav>
           {Links}
           <NavDropdown title={props.user.email}>
