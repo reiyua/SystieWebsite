@@ -2,17 +2,23 @@ import { FirebaseConfig } from "./config/Config"
 import { initializeApp } from "firebase/app"
 import { Routes, Route } from "react-router-dom"
 import { useState, useEffect } from "react"
-import { getAuth,
+import {
+  getAuth,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
-  signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore,
-   collection,
-    query,
-     where,
-      getDocs } from "firebase/firestore";
-      import {getStorage} from "firebase/storage"
+  signInWithEmailAndPassword
+} from "firebase/auth";
+import {
+  getFirestore,
+  collection,
+  query,
+  where,
+  getDoc,
+  getDocs,
+  doc
+} from "firebase/firestore";
+import { getStorage } from "firebase/storage"
 
 import { Header } from "./components/Header"
 import './App.css'
@@ -34,8 +40,8 @@ function App() {
   const FBauth = getAuth(FBapp)
   const FBdb = getFirestore(FBapp)
   const FBstorage = getStorage(FBapp)
- 
- 
+
+
   // navigation array
   const navItems = [
     { label: "Home", link: "/" },
@@ -49,35 +55,35 @@ function App() {
     { label: "Home", link: "/" },
     { label: "About", link: "/about" },
     { label: "Contact", link: "/contact" },
-  
+
   ]
 
   /// application states
   const [nav, setNav] = useState(navItems)
   const [auth, setAuth] = useState(false)
   const [data, setData] = useState([])
-  const [ fetching , setFetching ] = useState( false )
+  const [fetching, setFetching] = useState(false)
 
-  useEffect( () => {
-    if( data.length === 0 && fetching === false ) {
+  useEffect(() => {
+    if (data.length === 0 && fetching === false) {
       readData()
-      setFetching( true )
+      setFetching(true)
     }
   }, [data])
 
 
-   // authentication observer
-   onAuthStateChanged(FBauth, (user) => {
-    if( user ) {
+  // authentication observer
+  onAuthStateChanged(FBauth, (user) => {
+    if (user) {
       // currently authenticated
-      setAuth( user )
-      setNav( AuthnavItems )
-      
+      setAuth(user)
+      setNav(AuthnavItems)
+
     }
     else {
       // currently unauthenticated
-      setAuth( false )
-      setNav( navItems )
+      setAuth(false)
+      setNav(navItems)
     }
   })
 
@@ -89,64 +95,73 @@ function App() {
   // signing up a user
   const signUp = (email, password) => {
     createUserWithEmailAndPassword(FBauth, email, password)
-      .then( (userCredential) => {
+      .then((userCredential) => {
         // do something
       })
       .catch((error) => console.log(error.message))
-    }
-
-  const logOut = () => {
-    signOut(FBauth).then( () => {
-      // user is signed out
-  })
-}
-
-const signIn = (email, password) => {
-  return new Promise((resolve, reject) => {
-    signInWithEmailAndPassword(FBauth, email, password)
-      .then(() => {
-        // user is signed in
-        resolve(true)
-      })
-      .catch((error) => { 
-        console.log(error) 
-        reject( error.code )
-      })
-  })
-}
-
-// function to get data
-const readData = async () => {
-  const querySnapshot = await getDocs( collection(FBdb, "books") )
-  let listdata = []
-  querySnapshot.forEach( (doc) => {
-    let item = doc.data()
-    item.id = doc.id
-    listdata.push( item )
-  })
-  setData( listdata )
- 
-}
-
-
-    return (
-      <div className="App">
-        <Header items={nav} user={auth} />
-        <AuthContext.Provider value={auth}>
-        <StorageContext.Provider value={FBstorage}>
-        <Routes>
-          <Route path="/" element={<Home items = {data} />} />
-          <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
-          <Route path="/contact" element={<Contact greeting="Hey you, this is contact page!" />} />
-          <Route path="/signup" element={ <Signup handler={signUp}/> } />
-          <Route path="/signout" element={ <Signout handler={logOut}/> } />
-          <Route path="/signin" element={ <Signin handler={signIn} authstate={auth}/> } />
-          <Route path="/detail/:id" element={<Detail/>} />
-        </Routes>
-        </StorageContext.Provider>
-        </AuthContext.Provider>
-      </div>
-    );
   }
 
-  export default App;
+  const logOut = () => {
+    signOut(FBauth).then(() => {
+      // user is signed out
+    })
+  }
+
+  const signIn = (email, password) => {
+    return new Promise((resolve, reject) => {
+      signInWithEmailAndPassword(FBauth, email, password)
+        .then(() => {
+          // user is signed in
+          resolve(true)
+        })
+        .catch((error) => {
+          console.log(error)
+          reject(error.code)
+        })
+    })
+  }
+
+  // function to get data
+  const readData = async () => {
+    const querySnapshot = await getDocs(collection(FBdb, "books"))
+    let listdata = []
+    querySnapshot.forEach((doc) => {
+      let item = doc.data()
+      item.id = doc.id
+      listdata.push(item)
+    })
+    setData(listdata)
+
+  }
+
+  // function to get a single item
+  const getDocument = async (itemId) => {
+    const docRef = doc(FBdb, "books", itemId)
+    const docSnap = await getDoc(docRef)
+    let book = docSnap.data()
+    book.id = itemId
+    return book
+  }
+
+
+  return (
+    <div className="App">
+      <Header items={nav} user={auth} />
+      <AuthContext.Provider value={auth}>
+        <StorageContext.Provider value={FBstorage}>
+          <Routes>
+            <Route path="/" element={<Home items={data} />} />
+            <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
+            <Route path="/contact" element={<Contact greeting="Hey you, this is contact page!" />} />
+            <Route path="/signup" element={<Signup handler={signUp} />} />
+            <Route path="/signout" element={<Signout handler={logOut} />} />
+            <Route path="/signin" element={<Signin handler={signIn} authstate={auth} />} />
+            <Route path="/detail/:id" element={<Detail handler={getDocument} />} />
+          </Routes>
+        </StorageContext.Provider>
+      </AuthContext.Provider>
+    </div>
+  );
+}
+
+export default App;
