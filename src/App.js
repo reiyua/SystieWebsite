@@ -22,7 +22,7 @@ import { Contact } from "./pages/Contact"
 import { Signup } from "./pages/Signup"
 import { Signout } from "./pages/Signout"
 import { Signin } from "./pages/Signin"
-
+import { Detail } from "./pages/Detail";
 // contexts
 import { AuthContext } from "./contexts/AuthContext"
 import { StorageContext } from "./contexts/StorageContext";
@@ -141,6 +141,7 @@ const readData = async () => {
           <Route path="/signup" element={ <Signup handler={signUp}/> } />
           <Route path="/signout" element={ <Signout handler={logOut}/> } />
           <Route path="/signin" element={ <Signin handler={signIn} authstate={auth}/> } />
+          <Route path="/detail/:id" element={<Detail/>} />
         </Routes>
         </StorageContext.Provider>
         </AuthContext.Provider>
