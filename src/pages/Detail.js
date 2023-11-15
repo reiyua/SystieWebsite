@@ -62,7 +62,7 @@ export function Detail(props) {
                             </Form.Group>
                             <Button type="submit" variant="primary">Submit</Button>
                             <Form.Group>
-                                <h3>Reviews of this book</h3>
+                                <h3>Existing reviews of this book</h3>
                                 <p>To be added</p>
                             </Form.Group>
                         </Form>
