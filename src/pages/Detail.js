@@ -61,6 +61,10 @@ export function Detail(props) {
                                 <Form.Control as="textarea" rows={3} cols={30} placeholder="I could not put this down!" />
                             </Form.Group>
                             <Button type="submit" variant="primary">Submit</Button>
+                            <Form.Group>
+                                <h3>Reviews of this book</h3>
+                                <p>To be added</p>
+                            </Form.Group>
                         </Form>
                     </Col>
                 </Row>
