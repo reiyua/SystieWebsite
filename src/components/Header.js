@@ -27,7 +27,7 @@ export function Header(props) {
 
   }
   return (
-    <Navbar>
+    <Navbar className="mb-3">
       <Container>
         <Navbar.Brand>Ray's Book Club</Navbar.Brand>
         <Nav>
