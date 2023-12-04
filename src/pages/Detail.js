@@ -8,64 +8,36 @@ import { ItemImage } from '../components/ItemImage';
 import Button from 'react-bootstrap/Button';
 
 export function Detail(props) {
-    const [bookData, setBookData] = useState()
+    const [artworkData, setArtworkData] = useState()
 
     let { id } = useParams();
 
     useEffect(() => {
-        if (!bookData) {
-            props.handler(id).then((book) => setBookData(book))
+        if (!artworkData) {
+            props.handler(id).then((art) => setArtworkData(art))
         }
     }, [id])
 
 
-    if (bookData) {
+    if (artworkData) {
         return (
             <Container>
                 <Row>
                     <Col>
-                        <h1 className="my-4">{bookData.book_title}</h1>
+                        <h1 className="my-4">{artworkData.artwork_title}</h1>
                     </Col>
                 </Row>
                 <Row>
                     <Col md={6}>
-                        <ItemImage source={bookData.cover_image} />
+                        <ItemImage source={artworkData.artwork_image} />
                     </Col>
                     <Col md={6}>
                         <h2>More information</h2>
-                        <h3>Summary</h3>
-                        <p>{bookData.summary}</p>
+                        <h3>Artwork description</h3>
+                        <p>{artworkData.summary}</p>
                         <h3>Author</h3>
-                        <p>{bookData.author}</p>
-                        <h3>ISBN</h3>
-                        <p>ISBN10: {bookData.isbn10}</p>
-                        <p>ISBN13: {bookData.isbn13}</p>
-                        <Form>
-                            <h3>Review this book</h3>
-                            <Form.Group>
-                                <Form.Label>Star</Form.Label>
-                                <Form.Select>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </Form.Select>
-                            </Form.Group>
-                            <Form.Group>
-                               <Form.Label>Title</Form.Label> 
-                               <Form.Control type="text" placeholder="I love this book" />
-                            </Form.Group>
-                            <Form.Group>
-                                <Form.Label>Review</Form.Label>
-                                <Form.Control as="textarea" rows={3} cols={30} placeholder="I could not put this down!" />
-                            </Form.Group>
-                            <Button type="submit" variant="primary">Submit</Button>
-                            <Form.Group>
-                                <h3>Existing reviews of this book</h3>
-                                <p>To be added</p>
-                            </Form.Group>
-                        </Form>
+                        <p>systie</p>
+                        
                     </Col>
                 </Row>
                 <Row>

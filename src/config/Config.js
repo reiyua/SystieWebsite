@@ -1,9 +1,10 @@
 export const FirebaseConfig = {
-    apiKey: "AIzaSyAL9_SCfMisIz7-kwV9ZBZzlG7y4lsGKdc",
-    authDomain: "rayyan-h-tafe-nsw.firebaseapp.com",
-    projectId: "rayyan-h-tafe-nsw",
-    storageBucket: "rayyan-h-tafe-nsw.appspot.com",
-    messagingSenderId: "579661195251",
-    appId: "1:579661195251:web:107f8e4fcd7879c1c45486"
+    apiKey: "AIzaSyBs-x5UvVLoR4ltuLif3rEt5cCTpI93xCY",
+    authDomain: "systie.firebaseapp.com",
+    projectId: "systie",
+    storageBucket: "systie.appspot.com",
+    messagingSenderId: "660143302275",
+    appId: "1:660143302275:web:62e0359ed606f2147a9db6",
+    measurementId: "G-LK7CNGHC0F"
 }
 
