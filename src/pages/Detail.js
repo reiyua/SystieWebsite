@@ -32,12 +32,10 @@ export function Detail(props) {
                         <ItemImage source={artworkData.artwork_image} />
                     </Col>
                     <Col md={6}>
-                        <h2>More information</h2>
                         <h3>Artwork description</h3>
                         <p>{artworkData.summary}</p>
                         <h3>Author</h3>
                         <p>systie</p>
-                        
                     </Col>
                 </Row>
                 <Row>

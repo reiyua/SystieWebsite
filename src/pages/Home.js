@@ -22,7 +22,7 @@ export function Home(props) {
           <Card key={itemkey} className="position-relative">
             <a href={itemLink} className="position-absolute" style={{top:0, left:0, right:0, bottom:0}}>
             </a>
-            <ItemImage source={ artwork.cover_image} />
+            <ItemImage source={ artwork.artwork_image} />
             <Card.Body>
               <Card.Title>{ artwork.artwork_title }</Card.Title>
             </Card.Body>
