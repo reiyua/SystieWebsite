@@ -35,6 +35,7 @@ function App() {
     { label: "Home", link: "/" },
     { label: "About", link: "/about" },
     { label: "Contact", link: "/contact" },
+    { label: "Gallery", link: "/gallery" },
   ]
  
 
@@ -95,6 +96,7 @@ function App() {
             <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
             <Route path="/contact" element={<Contact greeting="Hey you, this is contact page!" />} />
             <Route path="/detail/:id" element={<Detail handler={getDocument} />} />
+            <Route path="/gallery" element={<Home items={data} />} />
           </Routes>
         </StorageContext.Provider>
     </div>
