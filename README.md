@@ -8,6 +8,8 @@ Host asset's and website on Google Firebase for to make it easy to maintain data
 
 Actively under construction, can change at anytime.
 
+Initially built from old repo to save time rebuilding.
+
 To do:
 
 - Move homepage to seperate gallery route.
