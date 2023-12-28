@@ -2,7 +2,7 @@
 
 Grace, a close friend of mine's future website, initial ideas of a site showcasing original artworks.
 
-Created in Reat.js using Create React App
+Created in React.js using Create React App
 
 https://systie.com https://systie.web.app
 
