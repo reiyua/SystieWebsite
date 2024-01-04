@@ -1,3 +1,4 @@
+// Importing necessary libraries and tools from Gppgle Firebase, React, React Router Dom, React Hooks, React Context API, and CSS
 import { FirebaseConfig } from "./config/Config"
 import { initializeApp } from "firebase/app"
 import { Routes, Route } from "react-router-dom"
@@ -13,14 +14,18 @@ import {
 } from "firebase/firestore";
 import { getStorage } from "firebase/storage"
 
+// importing components (pages)
 import { Header } from "./components/Header"
-import './App.css'
 import { About } from "./pages/About"
 import { Home } from "./pages/Home"
 import { Contact } from "./pages/Contact"
 import { Detail } from "./pages/Detail";
+
 // contexts
 import { StorageContext } from "./contexts/StorageContext";
+
+// import css
+import './App.css'
 
 
 
