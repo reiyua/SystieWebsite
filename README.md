@@ -2,7 +2,7 @@
 
 Grace, a close friend of mine's future website, initial ideas of a site showcasing original artworks.
 
-Created in Reat.js using Create React App
+Created in React.js using Create React App
 
 https://systie.com https://systie.web.app
 
@@ -14,8 +14,8 @@ Initially built from old repo to save time rebuilding.
 
 To do:
 
-- Move homepage to seperate gallery route.
-- Modify contact page, maybe add form? Ask Grace.
+- Move homepage to seperate gallery route to allow for a simple explanation and/or friendly greeting.
+- Modify contact page, maybe add form? Figure out email API to handle this. Ask Grace.
 - Add a splash of colour 🤷‍♂️
 - Get proper artwork into database.
-- Modify about page with proper info, info dependendant on what Grace wants.
+- Modify about page with proper info, info dependendant on what is requested.
