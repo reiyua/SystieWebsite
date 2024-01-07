@@ -4,7 +4,7 @@ Grace, a close friend of mine's future website, initial ideas of a site showcasi
 
 Created in React.js using Create React App
 
-https://systie.com https://systie.web.app
+https://systie.web.app
 
 Host asset's and website on Google Firebase for to make it easy to maintain data.
 
