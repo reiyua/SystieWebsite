@@ -19,3 +19,10 @@ To do:
 - Add a splash of colour 🤷‍♂️
 - Get proper artwork into database.
 - Modify about page with proper info, info dependendant on what is requested.
+
+
+OTHER NOTES:
+
+This project uses an email react form that is on the contact form, created by "Chaoo Charles"
+https://github.com/chaoocharles/react-email.js
+https://www.youtube.com/watch?v=bMq2riFCF90
