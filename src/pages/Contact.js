@@ -1,6 +1,11 @@
 // import required component
-import ContactForm from "../components/EmailContactForm"
+
+
 
 export function Contact ( props ) {
-    <Contact />
+    return (
+        <div>
+            <h1>Contact</h1>
+        </div>
+    )
 }
