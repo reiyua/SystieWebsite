@@ -14,7 +14,7 @@ Initially built from old repo to save time rebuilding.
 
 To do:
 
-- Move homepage to seperate gallery route to allow for a simple explanation and/or friendly greeting.
+- Add information on home page, dependant on Grace.
 - Modify contact page, maybe add form? Figure out email API to handle this. Ask Grace.
 - Add a splash of colour 🤷‍♂️
 - Get proper artwork into database.
