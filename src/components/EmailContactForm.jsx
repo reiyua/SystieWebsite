@@ -4,7 +4,7 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 
-const Contact = () => {
+const ContactForm = () => {
   const form = useRef();
 
 
@@ -45,7 +45,7 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default ContactForm;
 
 // Styles
 const StyledContactForm = styled.div`
