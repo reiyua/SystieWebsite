@@ -20,6 +20,7 @@ import { About } from "./pages/About"
 import { Home } from "./pages/Home"
 import { Contact } from "./pages/Contact"
 import { Detail } from "./pages/Detail";
+import { Gallery } from "./pages/Gallery";
 
 // contexts
 import { StorageContext } from "./contexts/StorageContext";
@@ -92,16 +93,17 @@ function App() {
   }
 
 
+  // modify the navigation on line 101 to new home page (gallery is set for now)
   return (
     <div className="App">
       <Header items={nav} user={auth} />
         <StorageContext.Provider value={FBstorage}>
           <Routes>
-            <Route path="/" element={<Home items={data} />} />
+            <Route path="/" element={<Home/>} /> 
             <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
             <Route path="/contact" element={<Contact greeting="Hey you, this is contact page!" />} />
             <Route path="/detail/:id" element={<Detail handler={getDocument} />} />
-            <Route path="/gallery" element={<Home items={data} />} />
+            <Route path="/gallery" element={<Gallery items={data} />} />
           </Routes>
         </StorageContext.Provider>
     </div>
