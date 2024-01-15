@@ -15,7 +15,8 @@ Initially built from old repo to save time rebuilding.
 To do:
 
 - Add information on home page, dependant on Grace.
-- Modify contact page, maybe add form? Figure out email API to handle this. Ask Grace.
+- Create temp about page.
+- Modify contact page, maybe add form? Figure out email API to handle this. Ask Grace what to put besides contact form.
 - Add a splash of colour 🤷‍♂️
 - Get proper artwork into database.
 - Modify about page with proper info, info dependendant on what is requested.
