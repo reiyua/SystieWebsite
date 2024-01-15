@@ -6,8 +6,6 @@ import { useState, useEffect } from "react"
 import {
   getFirestore,
   collection,
-  query,
-  where,
   getDoc,
   getDocs,
   doc

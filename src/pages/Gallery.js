@@ -31,6 +31,8 @@ export function Gallery(props) {
       )
     })
   
+
+    // Container to show artworks in gallery like format.
     return (
       <Container>
         <Row>

@@ -1,11 +1,11 @@
+// import required modules
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
 import Container from "react-bootstrap/Container";
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { ItemImage } from '../components/ItemImage';
-import Button from 'react-bootstrap/Button';
+
 
 export function Detail(props) {
     const [artworkData, setArtworkData] = useState()
@@ -18,6 +18,8 @@ export function Detail(props) {
         }
     }, [id])
 
+
+    // Container to show information and artwork itself
 
     if (artworkData) {
         return (
