@@ -99,7 +99,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} /> 
             <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
-            <Route path="/contact" element={<Contact greeting="Hey you, this is contact page!" />} />
+            <Route path="/contact" element={<Contact/>} />
             <Route path="/detail/:id" element={<Detail handler={getDocument} />} />
             <Route path="/gallery" element={<Gallery items={data} />} />
           </Routes>
