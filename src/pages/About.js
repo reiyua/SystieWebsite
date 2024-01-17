@@ -1,8 +1,9 @@
-export function About ( props ) {
-    return ( 
+export function About() {
+  return (
     <div>
-      <h1>{ props.greeting }</h1>
-      <button onClick={ () => props.handler("I've been clicked!") } >Click me</button>
+      <h1>About me:</h1>
+      <p>This will have information added soon</p>
     </div>
-    )
-  }
+  );
+}
+  

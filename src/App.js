@@ -100,7 +100,7 @@ function App() {
         <StorageContext.Provider value={FBstorage}>
           <Routes>
             <Route path="/" element={<Home/>} /> 
-            <Route path="/about" element={<About greeting="Hey you, this is about page!" handler={saySomething} />} />
+            <Route path="/about" element={<About/>} />
             <Route path="/contact" element={<Contact/>} />
             <Route path="/detail/:id" element={<Detail handler={getDocument} />} />
             <Route path="/gallery" element={<Gallery items={data} />} />
