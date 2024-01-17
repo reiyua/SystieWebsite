@@ -10,23 +10,7 @@ export function Header(props) {
       <Nav.Link href={item.link} key={itemkey}> {item.label}  </Nav.Link>
     )
   })
-  // component for Account
-  const Account = (props) => {
-    if (props.user) {
-      return (
-        <Account user={ props.user } />
-      
-      // this caused an absolute mindfuck
-        // <NavDropdown title="Account">
-         // <NavDropdown.Item href="/signout">Log out</NavDropdown.Item>
-        // </NavDropdown>
-      )
-    }
-    else {
-      return null
-    }
-
-  }
+  
   return (
     // create a navigation bar with the collection of navigation items, display as black bar with "ClassName" and variant"
     <Navbar className="mb-3 bg-dark" variant="dark">
@@ -34,8 +18,8 @@ export function Header(props) {
         <Navbar.Brand>systie</Navbar.Brand>
         <Nav>
           {Links}
-          
         </Nav>
       </Container>
-    </Navbar>)
+    </Navbar>
+  )
 }
