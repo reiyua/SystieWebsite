@@ -10,7 +10,7 @@ export function Home(props) {
   return (
     // temp home page
     <Container>
-      <p>This is a tempoary home page</p>
+      <p>This is a tempoary home page further work will be done later on.</p>
     </Container>
   )
 } 
