@@ -26,7 +26,7 @@ export function Header(props) {
 
   }
   return (
-    <Navbar className="mb-3">
+    <Navbar className="mb-3 bg-dark" variant="dark">
       <Container>
         <Navbar.Brand>systie</Navbar.Brand>
         <Nav>
