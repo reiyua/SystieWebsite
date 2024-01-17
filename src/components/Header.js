@@ -13,7 +13,7 @@ export function Header(props) {
   })
   
   return (
-    // create a navigation bar with the collection of navigation items, display as black bar with "ClassName" and variant"
+    // create a navigation bar with the collection of navigation items, display as black bar using "ClassName" and variant"
     <Navbar className="mb-3 bg-dark" variant="dark">
       <Container>
         <Navbar.Brand>systie</Navbar.Brand>
