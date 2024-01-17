@@ -15,7 +15,9 @@ export function Header(props) {
     if (props.user) {
       return (
         <Account user={ props.user } />
-       // <NavDropdown title="Account">
+      
+      // this caused an absolute mindfuck
+        // <NavDropdown title="Account">
          // <NavDropdown.Item href="/signout">Log out</NavDropdown.Item>
         // </NavDropdown>
       )
@@ -26,6 +28,7 @@ export function Header(props) {
 
   }
   return (
+    // create a navigation bar with the collection of navigation items, display as black bar with "ClassName" and variant"
     <Navbar className="mb-3 bg-dark" variant="dark">
       <Container>
         <Navbar.Brand>systie</Navbar.Brand>

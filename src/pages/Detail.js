@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { ItemImage } from '../components/ItemImage';
 
 
+// create function called "Detail"
 export function Detail(props) {
     const [artworkData, setArtworkData] = useState()
 
@@ -19,7 +20,8 @@ export function Detail(props) {
     }, [id])
 
 
-    // Container to show information and artwork itself
+    // container to show information and artwork itself in further detail when user click on image from "Gallery.js" page
+    // Information on the right, image on the left.
 
     if (artworkData) {
         return (

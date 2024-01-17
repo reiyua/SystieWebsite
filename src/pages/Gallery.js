@@ -1,3 +1,4 @@
+// import modules required
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Container from "react-bootstrap/Container";
@@ -5,6 +6,8 @@ import Card from "react-bootstrap/Card";
 import { useState, useEffect } from "react"
 import { ItemImage } from "../components/ItemImage"
 
+
+// create function called "Gallery"
 export function Gallery(props) {
     const [artworks,setArtworks] = useState([])
 
@@ -14,7 +17,7 @@ export function Gallery(props) {
     }, [props.items])
   
   
-  
+    // create a collection of artworks and assign things like position and scaling and referring to Google Firebase Firestore for data.
     const ItemCards = artworks.map( ( artwork, itemkey ) => {
       const itemLink = `/detail/${artwork.id}`
       return(
