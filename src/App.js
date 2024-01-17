@@ -58,7 +58,8 @@ function App() {
 
 
   
-
+// create function to say something for route section (user needs to add a word or sentence at the end)
+// EXAMPLE:  <Route path="/example" element={<About greeting="Hey you, this is an example page!" handler={saySomething} />} />
   const saySomething = (word) => {
     alert(word)
   }
@@ -81,7 +82,7 @@ function App() {
 
   }
 
-  // function to get a single item
+  // function to get a single item from Google Firestore Database
   const getDocument = async (itemId) => {
     const docRef = doc(FBdb, "artworks", itemId)
     const docSnap = await getDoc(docRef)
@@ -92,6 +93,7 @@ function App() {
 
 
 
+  // create routes for the navbar to direct to certain pages
   return (
     <div className="App">
       <Header items={nav} user={auth} />
