@@ -91,7 +91,7 @@ function App() {
   }
 
 
-  // modify the navigation on line 101 to new home page (gallery is set for now)
+
   return (
     <div className="App">
       <Header items={nav} user={auth} />
