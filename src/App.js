@@ -1,5 +1,5 @@
 // Importing necessary libraries and tools from Gppgle Firebase, React, React Router Dom, React Hooks, React Context API, and CSS
-import { FirebaseConfig } from "./config/Config"
+import { FirebaseConfig } from "./config/FirebaseConfig"
 import { initializeApp } from "firebase/app"
 import { Routes, Route } from "react-router-dom"
 import { useState, useEffect } from "react"
