@@ -1,6 +1,6 @@
 # SystieWebsite
 
-Grace, a close friend of mine's future website, initial ideas of a site showcasing original artworks.
+A close friend of mine's future website, initial ideas of a site showcasing original artworks.
 
 Created in React.js using Create React App
 
@@ -14,9 +14,9 @@ Initially built from old repo to save time rebuilding.
 
 To do:
 
-- Add information on home page, dependant on Grace.
+- Add information on home page.
 - Create about page which talks about author, backgoround etc.
-- Modify contact page, maybe add form? Figure out email API to handle this. Ask Grace what to put besides contact form.
+- Modify contact page, maybe add form? Figure out email API to handle this. Ask what to put besides contact form.
 - Add a splash of colour 🤷‍♂️
 - Get proper artwork into database.
 - Modify about page with proper info, info dependendant on what is requested.
