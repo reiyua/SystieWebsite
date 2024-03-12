@@ -1,5 +1,7 @@
 # SystieWebsite
 
+ARCHIVED UNTIL FURTHER NOTICE
+
 A close friend of mine's future website, initial ideas of a site showcasing original artworks.
 
 Created in React.js using Create React App
